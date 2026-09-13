@@ -21,7 +21,6 @@ function Header() {
           <a href="#glossary">Glossary</a>
           <a href="#screener">Screener chatbot</a>
         </nav>
-        <a className="nav-cta" href="/admin">Admin sign in</a>
       </header>
     </>
   );
