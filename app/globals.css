@@ -78,4 +78,62 @@ details p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 14px
 .disclaimer p { font-size: 13px; line-height: 1.6; margin: 0; max-width: 840px; }
 .footer { color: var(--muted); font-size: 12px; padding: 28px 0; }
 .footer-inner { display: flex; justify-content: space-between; }
-@media (max-width: 760px) { .container { width: min(100% - 28px, 560px); } .nav-links { display: none; } .hero { padding: 42px 0 55px; } .hero-grid, .split { grid-template-columns: 1fr; gap: 35px; } .hero-art { min-height: 260px; } .section { padding: 58px 0; } .section-head { display: block; } .section-intro { margin-top: 20px; } .card-grid, .stat-row { grid-template-columns: 1fr; } .screener-panel { align-items: start; grid-template-columns: 1fr; padding: 25px; } .footer-inner { gap: 12px; flex-direction: column; } }
+@media (max-width: 760px) { .container { width: min(100% - 28px, 560px); } .nav-links { display: none; } .hero { padding: 42px 0 55px; } .hero-grid, .split { grid-template-columns: 1fr; gap: 35px; } .hero-art { min-height: 260px; } .section { padding: 58px 0; } .section-head { display: block; } .section-intro { margin-top: 20px; } .card-grid, .stat-row { grid-template-columns: 1fr; } .screener-panel { align-items: start; grid-template-columns: 1fr; padding: 25px; } .footer-inner { gap: 12px; flex-direction: column; } .glossary-grid { grid-template-columns: 1fr; } }
+
+/* ── Floating chatbot button ─────────────────────────────────── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(47,111,104,.45), 0 4px 18px rgba(47,111,104,.28); }
+  50%       { box-shadow: 0 0 0 10px rgba(47,111,104,0),  0 4px 18px rgba(47,111,104,.28); }
+}
+.fab {
+  align-items: center;
+  animation: pulse-glow 2.6s ease-in-out infinite;
+  background: var(--teal);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 18px rgba(47,111,104,.28);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+  width: 56px;
+}
+.fab:hover { background: #245c56; transform: scale(1.08); }
+.fab-wrap { position: fixed; bottom: 28px; right: 28px; z-index: 999; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.fab-tooltip {
+  background: var(--ink);
+  border-radius: 6px;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  opacity: 0;
+  padding: 7px 11px;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity .18s, transform .18s;
+  white-space: nowrap;
+}
+.fab-wrap:hover .fab-tooltip { opacity: 1; transform: translateY(0); }
+
+/* ── Glossary ─────────────────────────────────────────────────── */
+.glossary-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); margin-top: 35px; }
+.glossary-card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 20px 22px; }
+.glossary-term { color: var(--teal); font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; margin: 0 0 6px; }
+.glossary-def { color: var(--muted); font-size: 13px; line-height: 1.65; margin: 0; }
+
+/* ── Tip list (skin & hair / lifestyle) ──────────────────────── */
+.tip-list { display: grid; gap: 10px; margin-top: 20px; }
+.tip-item { align-items: flex-start; display: flex; gap: 10px; }
+.tip-dot { background: var(--coral); border-radius: 50%; flex-shrink: 0; height: 8px; margin-top: 6px; width: 8px; }
+.tip-item p { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0; }
+
+/* ── Fertility hope box ───────────────────────────────────────── */
+.hope-box { background: white; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 8px; margin-top: 32px; padding: 24px 28px; }
+.hope-box h3 { font-size: 22px; margin: 0 0 10px; }
+.hope-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+
