@@ -127,6 +127,15 @@ export default function Home() {
               <div className="stat"><strong>Many paths</strong><span>symptoms vary from person to person</span></div>
               <div className="stat"><strong>Not your fault</strong><span>it is not caused by a lack of willpower</span></div>
             </div>
+            <div className="hope-box" style={{ marginTop: "28px", borderLeftColor: "var(--coral)", padding: "20px 22px" }}>
+              <span className="eyebrow" style={{ color: "var(--coral)", fontWeight: 700, fontSize: "11px", letterSpacing: "0.08em" }}>
+                Name update · Evolving terminology
+              </span>
+              <h3 style={{ fontSize: "19px", margin: "6px 0 8px" }}>PCOS is also known as PMOS</h3>
+              <p style={{ color: "var(--muted)", fontSize: "13px", lineHeight: "1.65", margin: 0 }}>
+                International guideline experts have recommended renaming the condition from <strong>PCOS (Polycystic Ovary Syndrome)</strong> to <strong>PMOS (Polyendocrine Metabolic Ovarian Syndrome)</strong>. The traditional name has often caused confusion: the small fluid follicles seen on an ultrasound are not true cysts, and many people with the condition do not have them. The updated name highlights that this is a whole-body endocrine and metabolic condition rather than an ovarian disorder alone. <strong>Both names refer to the exact same condition</strong>, so you may see healthcare providers use either PCOS or PMOS.
+              </p>
+            </div>
           </div>
           <div className="list">
             <div className="list-item">
@@ -224,18 +233,44 @@ export default function Home() {
             <p className="section-intro">Short summaries in everyday language. Each one links to the trusted source, and nothing is published without review.</p>
           </div>
           <div className="guideline">
-            <span className="eyebrow">2023 international evidence-based guideline</span>
+            <span className="eyebrow">2023 international evidence-based guideline · Primary source</span>
             <h3>PCOS care should be personal, not one-size-fits-all.</h3>
             <p>Experts recommend shared decision-making: your goals, preferences, symptoms, and overall health should shape your care. Lifestyle support is helpful for everyone, whatever their body size.</p>
             <a className="source" href="https://www.monash.edu/medicine/mchri/pcos/guideline" target="_blank" rel="noreferrer">Read the source at Monash University <ArrowUpRight size={13} /></a>
           </div>
           <div className="guideline">
-            <span className="eyebrow">2023 mental health recommendation</span>
+            <span className="eyebrow">2023 mental health recommendation · Primary source</span>
             <h3>Mood deserves a place in every PCOS conversation.</h3>
             <p>Guidelines encourage clinicians to ask about depression and anxiety, and to offer support when needed. Seeking help is a sign of care, not a failure.</p>
             <a className="source" href="https://www.monash.edu/medicine/mchri/pcos/guideline" target="_blank" rel="noreferrer">Read the source at Monash University <ArrowUpRight size={13} /></a>
           </div>
-          <p className="hero-note">Last updated on {updated} · Next scheduled source check: 31 August 2026</p>
+
+          <div style={{ marginTop: "40px", marginBottom: "24px", paddingTop: "28px", borderTop: "1px solid var(--line)" }}>
+            <span className="eyebrow" style={{ color: "var(--teal)", fontWeight: 700, fontSize: "11px", letterSpacing: "0.08em" }}>
+              Recent research updates (2024–2026) · Supporting evidence
+            </span>
+            <h3 style={{ fontFamily: "'Fraunces', serif", fontSize: "24px", margin: "6px 0 10px" }}>
+              How clinical understanding continues to evolve.
+            </h3>
+            <p style={{ color: "var(--muted)", fontSize: "14px", lineHeight: "1.65", maxWidth: "680px", margin: 0 }}>
+              The 2023 guideline remains the foundational clinical standard. These recent research highlights reflect ongoing discoveries in cardiovascular risk, global prevalence, and diagnostic terminology.
+            </p>
+          </div>
+
+          <div className="guideline">
+            <span className="eyebrow">2024–2025 research update · Heart &amp; vascular health</span>
+            <h3>Cardiovascular risk checks are recommended earlier, regardless of body weight.</h3>
+            <p>Recent multi-center studies following the 2023 guideline highlight that PCOS/PMOS carries lifelong cardiovascular implications, including higher risks of high blood pressure and altered lipid levels. Expert consensuses urge routine blood pressure and lipid monitoring starting at the time of diagnosis for people of every body size, making preventive heart care a standard part of ongoing management.</p>
+            <a className="source" href="https://www.monash.edu/medicine/mchri/pcos/guideline" target="_blank" rel="noreferrer">Read cardiovascular consensus at Monash MCHRI <ArrowUpRight size={13} /></a>
+          </div>
+          <div className="guideline">
+            <span className="eyebrow">2025 epidemiological analysis · Global prevalence &amp; screening</span>
+            <h3>Worldwide prevalence reaches 10%–13%, highlighting the urgency of earlier diagnosis.</h3>
+            <p>Updated global burden studies show that PCOS/PMOS affects an estimated 10% to 13% of women and individuals with ovaries worldwide, with higher prevalence observed in South Asian and Indigenous populations. With research showing that many individuals wait years and see multiple doctors before getting answers, public health bodies emphasize faster, culturally sensitive screening to reduce delays in receiving support.</p>
+            <a className="source" href="https://www.who.int/news-room/fact-sheets/detail/polycystic-ovary-syndrome" target="_blank" rel="noreferrer">View PCOS global data at the World Health Organization <ArrowUpRight size={13} /></a>
+          </div>
+
+          <p className="hero-note" style={{ marginTop: "28px" }}>Primary standard: 2023 International Evidence-Based Guideline · Research updates: 2024–2026 · Last updated on {updated}</p>
         </div>
       </section>
 
@@ -514,6 +549,10 @@ export default function Home() {
             <div className="glossary-card">
               <p className="glossary-term">Polycystic ovaries</p>
               <p className="glossary-def">On an ultrasound, ovaries in PCOS can look like they contain many small fluid-filled sacs (follicles). These are not painful cysts — the word "polycystic" just describes how they look. You can have PCOS without this finding.</p>
+            </div>
+            <div className="glossary-card">
+              <p className="glossary-term">PMOS (Polyendocrine Metabolic Ovarian Syndrome)</p>
+              <p className="glossary-def">The updated clinical name proposed by international PCOS guideline groups. It reflects that the condition involves multiple hormones (polyendocrine) and whole-body metabolism, rather than being defined by ovarian cysts. PMOS and PCOS refer to the exact same condition.</p>
             </div>
             <div className="glossary-card">
               <p className="glossary-term">Hirsutism</p>
